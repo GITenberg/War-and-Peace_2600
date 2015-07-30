@@ -16,6 +16,12 @@ contributor:
     gutenberg_agent_id: '500'
     url: http://www.gutenberg.org/2009/agents/500
     wikipedia: http://en.wikipedia.org/wiki/Aylmer_and_Louise_Maude
+covers:
+- attribution: T.M. Serlin, 2015
+  cover_type: original
+  image_path: cover.jpg
+  rights: Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+  rights_url: https://creativecommons.org/licenses/by-nc/4.0/
 creator:
   author:
     agent_name: Tolstoy, Leo, graf
