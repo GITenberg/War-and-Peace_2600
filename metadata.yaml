@@ -9,8 +9,8 @@ contributor:
     wikipedia: http://en.wikipedia.org/wiki/Aylmer_and_Louise_Maude
   - agent_name: Maude, Louise
     aliases:
-    - Shanks, Louise
     - Maude, Louise Shanks
+    - Shanks, Louise
     birthdate: 1855
     deathdate: 1939
     gutenberg_agent_id: '500'
@@ -26,20 +26,20 @@ creator:
   author:
     agent_name: Tolstoy, Leo, graf
     aliases:
+    - Tolstoi, Leo
+    - Толстой, Лев Николаевич
     - Tolstoy, Lev N.
     - Tolstoï, Léon
-    - Толстой, Лев Николаевич
-    - Tolstoi, Leo
     birthdate: 1828
     deathdate: 1910
     gutenberg_agent_id: '136'
     url: http://www.gutenberg.org/2009/agents/136
     wikipedia: http://en.wikipedia.org/wiki/Leo_Tolstoy
 gutenberg_bookshelf:
-- Opera
-- Best Books Ever Listings
-- Movie Books
 - Napoleonic(Bookshelf)
+- Best Books Ever Listings
+- Opera
+- Movie Books
 - Historical Fiction
 gutenberg_issued: '2001-04-01'
 gutenberg_type: Text
@@ -50,11 +50,11 @@ publisher: Project Gutenberg
 rights: Public domain in the USA.
 rights_url: http://creativecommons.org/about/pdm
 subjects:
-- '!lcsh:War stories'
-- '!lcsh:Napoleonic Wars, 1800-1815 -- Campaigns -- Russia -- Fiction'
-- '!lcsh:Historical fiction'
-- '!lcc:PG'
-- '!lcsh:Russia -- History -- Alexander I, 1801-1825 -- Fiction'
-- '!lcsh:Aristocracy (Social class) -- Russia -- Fiction'
+- '!lcsh: War stories'
+- '!lcsh: Napoleonic Wars, 1800-1815 -- Campaigns -- Russia -- Fiction'
+- '!lcsh: Russia -- History -- Alexander I, 1801-1825 -- Fiction'
+- '!lcc: PG'
+- '!lcsh: Aristocracy (Social class) -- Russia -- Fiction'
+- '!lcsh: Historical fiction'
 title: War and Peace
 url: http://www.gutenberg.org/ebooks/2600
