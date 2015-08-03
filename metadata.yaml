@@ -1,4 +1,5 @@
 _repo: War-and-Peace_2600
+_version: 0.0.1
 contributor:
   translators:
   - agent_name: Maude, Aylmer
@@ -46,9 +47,10 @@ gutenberg_type: Text
 identifiers:
   gutenberg: '2600'
 language: en
-publisher: Project Gutenberg
-rights: Public domain in the USA.
-rights_url: http://creativecommons.org/about/pdm
+publication_date: '2015-08-01'
+publisher: Recovering the Classics
+rights: CC BY-NC
+rights_url: http://creativecommons.org/licenses/by-nc/4.0/
 subjects:
 - '!lcsh: War stories'
 - '!lcsh: Napoleonic Wars, 1800-1815 -- Campaigns -- Russia -- Fiction'
