@@ -1,0 +1,32 @@
+language: ruby
+before_install:
+- gem install asciidoctor tilt
+script:
+- VERSION=`ruby -e "require 'yaml'; meta = YAML.load_file('metadata.yaml'); puts meta['_version'];"`
+- git clone https://github.com/gitenberg-dev/asciidoctor-htmlbook.git
+- asciidoctor -a toc,version=$VERSION -b xhtml5 -T ./asciidoctor-htmlbook/htmlbook-autogen/
+  -d book book.asciidoc -o book.html
+- git clone https://github.com/gitenberg-dev/HTMLBook
+- xsltproc -stringparam external.assets.list " " ./HTMLBook/htmlbook-xsl/epub.xsl book.html
+- cp ./HTMLBook/stylesheets/epub/epub.css OEBPS
+- cp cover.jpg OEBPS/cover.jpg
+- if test -d "./images"; then mv ./images ./OEBPS/ ;fi
+- zip -rX book.epub mimetype
+- zip -rX book.epub OEBPS/ META-INF/
+- if test -d "OEBPS/images/"; then zip -rX book.epub OEBPS/images/ ;fi 
+- mv book.epub War-and-Peace.epub
+branches:
+  only:
+  - master
+deploy:
+  skip_cleanup: true
+  provider: releases
+  api_key:
+    secure: MODAAKiTHsYSXFQoK1RxGwk4474pIsliEghVHZjxuQOzg37bToKDE4xUsBuVyR3xRUTeg/sjcjIkIGdLe4leHgOfmmpqjR80/mlj5ILDdM4rGVFfY1SkEuld2TQasmi+WQkB8NFF7/yNYYPj5Bq6pkt7AvoXZFftuClVTvumvSQzeAxyliL4Ox9JJvIh85X7NFOMkucug1iN3URjGT0FoyPjS947NUeABylt2t5kh7As5KgzdU9ylVev6kUIsAc8lHHRl/tGU6Wi2wyy4kJjDdgMZ6ZFni7UmocPk1e0f6tSeaEm8uHsxfnXCnXAYMIEzHWqrHOlUvzN20z1kQQJt/KDw5teZ4krmsTrggDB8YET5AExDcpolc4/IGM5Q/XIdEVXy/BHw362ICEmRtn5p1cbNn5DZ0t/0Ha8KeQdOUerOoedtVjyEiZzSY12sAOVWTLXPiIta6iauVaNK1qvJZ3TlwqkLExNA4hEJn9sm57TxQv9Dynp7zFyOZfL2CMCdn2Wnwl487JTXziwZxKA7mH4xFonHW5DTBotiAtZgWSobmP3PVL5StCuWv1RH7BISqHzwkncEdYODjKWmVG/Qr6Y7puivde5iOSdSurBX53CZPbBvc9k9fGecfHkUjoI0rgxHdRKL+GSYg40Pfcw+z0IoMmwwD93PH7cTfL7QrI=
+  file: War-and-Peace.epub
+  "on":
+    repo: GITenberg/War-and-Peace_2600
+addons:
+  apt:
+    packages:
+    - xsltproc
