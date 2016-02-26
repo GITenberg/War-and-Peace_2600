@@ -1,5 +1,5 @@
 _repo: War-and-Peace_2600
-_version: 0.0.2
+_version: 0.1.0
 contributor:
   translators:
   - agent_name: Maude, Aylmer
@@ -58,5 +58,6 @@ subjects:
 - '!lcc: PG'
 - '!lcsh: Aristocracy (Social class) -- Russia -- Fiction'
 - '!lcsh: Historical fiction'
+- GITenberg
 title: War and Peace
 url: http://www.gutenberg.org/ebooks/2600
