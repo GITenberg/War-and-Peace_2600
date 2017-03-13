@@ -1,5 +1,5 @@
 _repo: War-and-Peace_2600
-_version: 0.2.1
+_version: 0.2.2
 contributor:
   translators:
   - agent_name: Maude, Aylmer
@@ -36,6 +36,8 @@ creator:
     gutenberg_agent_id: '136'
     url: http://www.gutenberg.org/2009/agents/136
     wikipedia: http://en.wikipedia.org/wiki/Leo_Tolstoy
+edition_identifiers:
+  edition_id: http://www.gutenberg.org/ebooks/2600#War-and-Peace
 gutenberg_bookshelf:
 - Napoleonic(Bookshelf)
 - Best Books Ever Listings
